@@ -15,3 +15,11 @@ def GetAllDoc(docName):
 
     for doc in docs:
         print(f"{doc.id} => {doc.to_dict()}")
+        
+        
+def insertParkingData(pk_data):
+    deviceId = pk_data.deviceId
+    percent  = pk_data.percent
+    db.collection("Parking").document(deviceId).update({
+        "percent" : percent
+    })
