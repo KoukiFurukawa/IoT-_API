@@ -5,7 +5,7 @@ import firebase_admin
 from firebase_admin import firestore
     
 class parkingData(BaseModel):
-    deviceId: str
+    parkingId: str
     percent : float
 
 app = FastAPI()
