@@ -1,16 +1,12 @@
 from fastapi import FastAPI
 from firebase_config.db_conf import GetAllDoc, insertParkingData
 from pydantic import BaseModel
-import firebase_admin
-from firebase_admin import firestore
     
 class parkingData(BaseModel):
     parkingId: str
     percent : float
 
 app = FastAPI()
-
-GetAllDoc("Users")
 
 @app.get("/")
 def read_root():

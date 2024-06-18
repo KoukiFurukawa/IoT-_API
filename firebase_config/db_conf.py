@@ -19,8 +19,8 @@ def GetAllDoc(docName):
         
 def insertParkingData(pk_data: parkingData):
     parkingId = pk_data.parkingId
-    data = {"item_id": 30, "percent": pk_data.percent}
-    db.collection("Parking").document(parkingId).set(data)
+    data = {"percent": pk_data.percent}
+    db.collection("Parking").document(parkingId).update(data)
         
         
 # def insertParkingData(pk_data):
